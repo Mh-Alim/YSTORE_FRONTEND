@@ -1,0 +1,16 @@
+#footer > .bg-footer {
+    background-color: var(--black);
+    width: 100%;
+   
+}
+
+.ml-1{
+    margin-left: 0.3rem;
+}
+.mr-2{
+    margin-right: 2rem;
+}
+.text-center a{
+    text-decoration: none;
+    font-family: var(--font-mono);
+}

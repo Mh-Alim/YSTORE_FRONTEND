@@ -1,0 +1,251 @@
+.ProductDetails{
+    background-color: var(--black);
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 10vw;
+}
+
+.carouselImageDiv{
+    width: 40%;
+}
+.CarouselImage{
+    width: 100%;
+}
+
+.detailsBlock{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: var(--white);
+    padding-left: 7rem;
+}
+.detailsBlock-2{
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--white);
+    border-top: 2px solid var(--white);
+}
+.detailsBlock-2 > span{
+    margin-left: 1rem;
+}
+
+.detailsBlock-3{
+
+}
+.detailsBlock-3-1{
+
+}
+.detailsBlock-3-1-1{
+    margin: 1.5rem 0;
+}
+.detailsBlock-3-1-1 > button{
+    padding: 0.5rem 1rem;
+    font-weight: 1000;
+    background-color: #761b1b ;
+    font-size: 1rem;
+    color: var(--white);
+    transition: background-color 0.5s;
+}
+.detailsBlock-3-1-1 > button:hover{
+
+    background-color: #f83636;
+    
+}
+.detailsBlock-3-1-1 > input[type = "number"]{
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: var(--slate);
+    outline: none;
+    text-align: center;
+    margin: 0 0.5rem;
+    border-radius: 4px;
+}
+
+.detailsBlock-3-1 > button{
+    background-color: #761b1b;
+    color: var(--white);
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+    margin-bottom: 1rem;
+}
+.detailsBlock-3-1 > button:hover{
+    background-color: #f83636;
+   
+}
+.detailsBlock-3-1 > button > i{
+    margin-right: 0.3rem;
+}
+
+.submitReview {
+    width: 40%;
+    margin-top: 1rem;
+    background-color: #761b1b;
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+    margin-bottom: 1rem;
+}
+
+.reviews{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--black);
+}
+.reviews{
+    color: var(--slate);
+    font-family: var(--font-sans);
+    
+}
+
+.reviews > h2{
+    width: 20%;
+    padding: 0.4rem 0;
+    margin: 0 auto;
+    text-align: center;
+    font-family: var(--font-mono);
+    color: var(--white-green);
+    border-bottom: 2px solid var(--white-green);
+    margin-bottom: 3rem;
+}
+
+.reviewCard{
+    border: 4px solid var(--slate);
+    border-radius: 9px;
+    width: fit-content;
+    height: 20rem;
+    min-width: 30%;
+    text-align: center;
+    padding: 1rem;
+    overflow-y: scroll;
+}
+
+
+.reviewCard::-webkit-scrollbar{
+    width: 0.3vw;
+    background-color: var(--light-navy);
+}
+.reviewCard::-webkit-scrollbar-thumb{
+    background-color: var(--green); 
+    border-radius: 5px;
+    
+}
+.reviewCard{
+    margin: 1rem;
+}
+.reviewCard > img{
+    width: 30%;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+.reviewCard > .reactStars{
+    margin-top: -1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.reviewCardHolder{
+    display: flex;
+    overflow: auto;
+    font-family: var(--font-sans);
+}
+
+
+.reviewCardHolder::-webkit-scrollbar{
+    width: 1px;
+    background-color: var(--black);
+}
+.reviewCardHolder::-webkit-scrollbar-thumb{
+    background-color: rgb(40, 37, 37); 
+    border-radius: 5px;
+    
+}
+
+.noReviews {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    padding-bottom: 3rem;
+}
+
+@media screen and (max-width: 1164px){
+    .detailsBlock-3-1-1 > input[type = "number"]{
+        width: 50%;
+    }
+    .submitReview{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 830px){
+    
+    .ProductDetails{
+        flex-direction: column;
+    }
+    .carouselImageDiv{
+        margin-bottom: 3rem;
+        width: 70%;
+    }
+
+    .detailsBlock {
+        width: 70%;
+        padding: 0;
+    }
+    .submitReview{
+        width: 70%;
+    }
+    .detailsBlock-2{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .ProductDetails{
+        text-align: center;
+    }
+    .submitReview{
+        
+        margin: 1rem auto;
+    }
+    .detailsBlock-3-1-1 > button {
+        padding: 0.2rem 0.5rem;
+    }
+    .detailsBlock-3-1-1 > input[type = "number"] {
+        padding: 0.2rem 0.5rem;
+    }
+}
+@media screen and (max-width : 360px) {
+    .carouselImageDiv{
+        width: 100%;
+    }
+    .ProductDetails{
+        text-align: center;
+    }
+    .detailsBlock-2{
+        display: flex;
+        justify-content: center;
+    }
+    .submitReview{
+        
+        width: 100%;
+    }
+    .detailsBlock{
+        width: 100%;
+    }
+    .detailsBlock-3-1-1{
+        width: 100%;
+    }
+    .detailsBlock-3-1-1 > button {
+        padding: 0.2rem 0.5rem;
+    }
+    .detailsBlock-3-1-1 > input[type = "number"] {
+        padding: 0.2rem 0.5rem;
+    }
+}

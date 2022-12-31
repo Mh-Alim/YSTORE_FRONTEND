@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Merriweather&family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto:wght@500&family=Sacramento&display=swap');
+
+:root{
+  --dark-purple : #1F1B32;
+  --black : rgb(11, 10, 16);
+  --light-purple : #5953B4;
+  --dark-navy : #1A2846;
+  --blure-dark : #0A1045;
+  --white : #F9F8F7;
+  --light-blue : #54AED7;
+  --rich-black : #011627;
+  --dark-purple : #1C0118;
+  --light-green : #6BD425;
+  --slate: #8892b0;
+  --white-green: #64ffda;
+ 
+
+
+  /* font family  */
+  --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+  --font-jack: "font-file-82132";
+  --font-mark: "Mark Pro,sans-serif";
+  --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html {
+  background: var(--black);
+}
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+ 
+}
+.app{
+  background-color: var(--black);
+  height: 100vh;
+}
+
+
+/* to remove arrow in input[type = "number"] */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.redColor{
+  color: red;
+}
+.greenColor {
+  color: green;
+}
+ 
+
+/* for scroll bar  */
+::selection {
+  background-color: var(--lightest-navy);
+  color: var(--lightest-slate);
+}
+
+html::-webkit-scrollbar{
+  width: 0.3vw;
+  background-color: var(--light-navy);
+}
+html::-webkit-scrollbar-thumb{
+  background-color: var(--green); 
+  border-radius: 5px;
+  
+}

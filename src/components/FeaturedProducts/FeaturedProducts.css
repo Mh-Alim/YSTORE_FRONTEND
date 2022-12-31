@@ -1,0 +1,128 @@
+.heading{
+    padding-top: 2rem;
+    font-size: 2rem;
+    font-family: var(--font-mono);
+    background-color: var(--black);
+    color: var(--light-blue);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+    align-items: center;
+    padding: 1rem;
+}
+.heading::after{
+    content: '';
+    display: block;
+    width: 20%;
+    height: 1px;
+    background-color: var(--light-blue);
+    margin-left: 1rem;
+}
+
+.FeaturedProducts{
+    background-color: var(--black);
+    height: fit-content;
+    width: 100%;
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 5rem;
+}
+
+.product{
+    background: rgba( 8, 0, 0, 0.1 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 16px );
+    -webkit-backdrop-filter: blur( 16px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 20%;
+    text-align: center;
+    padding: 1rem;
+    margin: 2rem;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.product:hover{
+    transform: translateY(-10px);
+}
+.product img {
+    width: 100%;
+}
+.rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.stars{
+    padding-bottom: 0.2rem;
+}
+.productContent h3{
+    padding-top: 0.8rem;
+    color: var(--white);
+}
+.white{
+    color: var(--white);
+}
+.reviewText{
+    margin-left: 1rem;
+    color: var(--white);
+}
+
+
+@media screen and (max-width: 1423px) {
+    .products{
+        padding: 3rem 3rem;
+    }
+    .product{
+        width: 25%;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .products{
+        padding: 3rem 0rem;
+    }
+    .product{
+        width: 27%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .rating{
+        flex-direction: column;
+    }
+    .reviewText{
+        margin: 0;
+    }
+}
+@media screen and (max-width: 730px) {
+    .productContent h3{
+        font-size: 1rem;
+    }
+    .productContent p{
+        font-size: 0.7rem;
+    }
+    .productContent div{
+        font-size: 0.7rem;
+    }
+    .product{
+        margin: 1rem;
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 470px) {
+    .product{
+        width: 70%;
+    }
+    
+}
+@media screen and (max-width: 350px) {
+    .heading::after{
+        display: none;
+    }
+    
+}

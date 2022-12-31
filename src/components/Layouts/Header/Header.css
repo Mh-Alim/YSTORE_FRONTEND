@@ -1,0 +1,19 @@
+#header > #navbar{
+    background-color: var(--black);
+
+}
+
+#header .hamburger{
+    color: var(--light-blue);
+}
+#navbarScroll .navUrl {
+    color: var(--white);
+    font-family: var(--font-mono);
+}
+
+#header .web_name{
+    color: var(--light-blue);
+    font-weight: 800;
+    margin-right: 2rem;
+    font-family: var(--font-mono);
+}
