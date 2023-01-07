@@ -14,7 +14,7 @@ import MetaData from "../Layouts/Header/MetaData"
 // react toastify 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { ToastCallError, ToastCallSuccess, ToastContainerSuccess } from "../../ReactToast";
 
 const categories = [
   "Laptop",
@@ -28,6 +28,8 @@ const categories = [
 
 
 const Products = () => {
+
+    
     const dispatch = useDispatch();
     const {loading,error,products,resultPerPage,filteredProductsCount} = useSelector((state) => state.products);
     const [currentPage, setCurrentPage] = useState(1);
@@ -51,16 +53,7 @@ const Products = () => {
 
       if(error){
 
-        return toast.error(error, {
-          position: "top-center",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "colored",
-          });
+        return ToastCallError(error);
       }
       dispatch(getProducts(keyword,currentPage,price,category,ratings));
      
@@ -138,20 +131,6 @@ const Products = () => {
           activeLinkClass = "pageLinkActive"
         />
       </div> : null}
-
-
-      <ToastContainer
-    position="top-center"
-    autoClose={5000}
-    hideProgressBar={false}
-    newestOnTop={false}
-    closeOnClick
-    rtl={false}
-    pauseOnFocusLoss
-    draggable
-    pauseOnHover
-    theme="light"
-    />
     </>
     }
     </>

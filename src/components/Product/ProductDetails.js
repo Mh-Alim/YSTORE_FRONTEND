@@ -7,14 +7,38 @@ import { useParams } from 'react-router-dom'
 import ReactStars from 'react-rating-stars-component'
 import ReviewCard from './ReviewCard'
 import MetaData from '../Layouts/Header/MetaData'
+import {addToCart} from "../../actions/cartAction"
+import {ToastCallSuccess} from "../../ReactToast"
 
 const ProductDetails = () => {
     
+
+    const [productCount,setProductCount] = useState(1);
+
+    
+
     const {id} = useParams();
-    console.log(id)
     const dispatch = useDispatch();
 
     const {product,loading,error} = useSelector((state)=>state.productDetails);
+
+
+
+    const addToCartHandler = ()=>{
+        dispatch(addToCart(id,productCount));
+        ToastCallSuccess("Item added to cart")
+    }
+
+    const increment = ()=>{
+        let qty = productCount+1;
+        if(qty > product.stock) return;
+        setProductCount(qty);
+    }
+    const decrement = ()=>{
+        let qty = productCount-1;
+        if(qty === 0) return;
+        setProductCount(qty);
+    }
     useEffect(() => {
       dispatch(getProductDetails(id));
     }, [dispatch,id])
@@ -51,11 +75,11 @@ const ProductDetails = () => {
                 <h1> {product.price} Rs </h1>
                 <div className="detailsBlock-3-1">
                     <div className="detailsBlock-3-1-1">
-                        <button>-</button>
-                        <input type="number" value="1" />
-                        <button>+</button>
+                        <button onClick={decrement}>-</button>
+                        <input readOnly type="number" value={productCount} />
+                        <button onClick={increment}>+</button>
                     </div>
-                    <button><i class="fa fa-shopping-cart" aria-hidden="true"></i>Add to Cart</button>
+                    <button onClick={addToCartHandler}><i class="fa fa-shopping-cart" aria-hidden="true"></i>Add to Cart</button>
                 </div>
                 <p>Status : <b className={product.stock < 1 ? "redColor": "greenColor"}>
                     {product.stock < 1 ? "Out of Stock" : "InStock"}

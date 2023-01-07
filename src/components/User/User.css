@@ -1,0 +1,292 @@
+
+/* signup form css  */
+
+
+.contact{
+    width: 100%;
+    height: fit-content;
+    background-color: var(--navy);
+    padding: 5rem 30rem;
+    font-family: var(--font-poppins);
+    color: var(--slate);
+}
+
+
+.contact_heading{
+    
+    font-weight: 600;
+    color: var(--green);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    font-family: var(--font-mono);
+}
+
+
+/* .contact_heading::before{
+    content: '04. ';
+    color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    margin-right: 8px;
+} */
+
+.contact_heading::after{
+    content: '';
+    display: block;
+    width: 200px;
+    margin-left: 1rem;
+    height: 0.5px;
+    background: var(--green);
+}
+
+.contact_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.contact_content_texts{
+    padding: 2rem 1rem;
+    width: 50%;
+    margin-right: 4rem;
+}
+
+.contact_content_texts{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.contact_content_texts_heading{
+    margin-bottom: 1rem;
+}
+
+.contact_content_forms{
+    width: 100%;
+}
+
+/* form css  */
+
+.input-icons{
+    width: 100%;
+}
+
+.input-icons i {
+    padding: 1.25rem 2rem;
+    padding-right: 1rem;
+    color: var(--green);
+    background-color: var(--lightest-navy);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom: 1px solid var(--green);
+    /* font-size: 1rem; */
+}
+
+.input_element{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: 500;
+    /* width: 100%; */
+    outline: none;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--lightest-navy);
+    color: var(--slate);
+    transition: border,background-color 0.7s;
+    border-bottom: 1px solid var(--green);
+    /* font-size: 1rem; */
+}
+
+input:focus{
+    background-color: var(--light-navy);
+    color: var(--light-slate);
+}
+
+
+textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--lightest-navy);
+    color: var(--slate);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-poppins);
+    border-bottom: 2px solid var(--green);
+}
+textarea:focus{
+    background-color: var(--light-navy);
+    color: var(--light-slate);
+}
+
+.contact_btn {
+    padding: 1;
+    margin-left: 0.5rem;
+    width: 30%;
+    font-size: 1rem;
+    background-color: var(--light-navy);
+    color: var(--green);
+    font-family: var(--font-mono);
+    border: 2px solid var(--green);
+    border-radius: 4px;
+    transition: color,background-color 1s;
+}
+
+.contact_btn > button{
+    outline: none;
+    border: none;
+    padding: 1rem;
+}
+.contact_btn:hover{
+    background-color: var(--lightest-navy);
+    color: var(--blue);
+}
+#avatar{
+    padding: 0.94rem 2rem;
+}
+input::file-selector-button {
+    padding-right: 7rem;
+    color: var(--green);
+    border: none;
+    background-color: var(--lightest-navy);
+    width: 120%;
+    
+}
+
+
+
+
+
+@media screen and (max-width: 940px) {
+    .contact_content{
+        flex-direction: column;
+    }
+    .contact{
+        height: fit-content;
+    }
+    .contact_content_texts{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .input_element{
+        margin-top: 2rem;
+        padding: 0;
+    }
+    
+    .contact_btn{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact_btn{
+        width: 40%;
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 335px) {
+    .contact_btn{
+        margin: auto auto;
+        width: 80%;
+        padding: 0.5rem;
+    }
+}
+@media screen and (max-width: 280px) {
+    .contact_heading::after{
+        display: none;
+    }
+}
+
+
+
+/* media query for padding  */
+
+
+
+@media screen and (max-width: 1500px) {
+    .contact{
+        padding: 5rem 25rem;
+    }
+}
+@media screen and (max-width: 1148px) {
+    .contact{
+        padding: 5rem 15rem;
+    }
+}
+@media screen and (max-width: 900px) {
+
+    .contact{
+        padding: 5rem 5rem;
+        height: fit-content
+    }
+    
+    
+}
+
+@media screen and (max-width: 525px) {
+   
+    .contact{
+        padding: 5rem 1rem;
+        
+    }
+    
+}
+
+
+
+
+
+/* login css  */
+
+.contact_heading_login{
+    
+    font-weight: 600;
+    color: var(--green);
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0;
+    font-family: var(--font-mono);
+    justify-content: center;
+    width: 20%;
+    border-bottom: 2px solid var(--green);
+    margin: 2rem auto;
+
+}
+
+.contact_content_forms > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_element > img {
+    width: 3.6rem;
+    background: var(--lightest-navy);
+    padding: 1rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+
+.changePassword{
+    width: 50%;
+    padding: 1rem 0;
+}
+.forgetPasswordText{
+    display: flex;
+    justify-content: flex-end;
+}

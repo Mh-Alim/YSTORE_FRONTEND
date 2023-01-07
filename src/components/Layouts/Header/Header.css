@@ -17,3 +17,21 @@
     margin-right: 2rem;
     font-family: var(--font-mono);
 }
+
+
+
+/* user options css  */
+
+.speedDial {
+    position: fixed;
+    right: 3vmax;
+    top: 4vmax;
+    
+}
+
+.speedDialIcon {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+
+}

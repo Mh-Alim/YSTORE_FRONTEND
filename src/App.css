@@ -1,6 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Merriweather&family=Montserrat:wght@500&family=Poppins:wght@300&family=Roboto:wght@500&family=Sacramento&display=swap');
 
 :root{
+
+
+  /* portfolio variables  */
+
+  --pink: #f57dff;    
+    --blue: #57cbff;
+    --green-tint: rgba(100,255,218,0.1);
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dull: rgba(2 ,29, 22 ,0.5);
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --slate: #8892b0;
+    --navy: #0a192f;
+
+    /* font size  */
+    --fz-xs: 13px;
+    --fz-xxs: 12px;
+    --fz-md : 14px;
+    --fz-xl : 20px;
+    --fz-l : 16px;
+
+    /* font family  */
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --font-jack: "font-file-82132";
+    --font-mark: "Mark Pro,sans-serif";
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+
+
+    /* This website variables */
+
+
+    
   --dark-purple : #1F1B32;
   --black : rgb(11, 10, 16);
   --light-purple : #5953B4;
@@ -31,15 +73,13 @@
   box-sizing: border-box;
   
 }
-html {
-  background: var(--black);
-}
+
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
  
 }
 .app{
-  background-color: var(--black);
+  background-color: var(--white);
   height: 100vh;
 }
 

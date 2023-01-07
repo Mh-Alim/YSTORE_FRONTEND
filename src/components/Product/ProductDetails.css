@@ -58,9 +58,11 @@
     
 }
 .detailsBlock-3-1-1 > input[type = "number"]{
+    width: 10%;
     padding: 0.5rem 1rem;
     font-weight: bold;
     background-color: var(--slate);
+    color: black;
     outline: none;
     text-align: center;
     margin: 0 0.5rem;
