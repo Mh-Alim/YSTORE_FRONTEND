@@ -3,7 +3,7 @@ import {useSelector,useDispatch} from "react-redux"
 import "./User.css"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { login,clearErrors } from '../../actions/userActions';
 import Loader from '../Layouts/Loader/Loader';
 import { ToastCallError, ToastCallSuccess, ToastContainerError } from '../../ReactToast';
@@ -13,10 +13,12 @@ import { ToastCallError, ToastCallSuccess, ToastContainerError } from '../../Rea
 
 
 
-
-
 const Login = () => {
 
+
+    const location = useLocation();
+    console.log(location.search.split("=")[1])
+    const redirect = location.search ? location.search.split("=")[1] : "account"
     const navigate = useNavigate();
 
     const {loading,isAuthenticated,error} = useSelector(state => state.user);
@@ -36,10 +38,10 @@ const Login = () => {
       }
 
       if(isAuthenticated){
-        navigate("/account");
-        ToastCallSuccess("Login Successfully")
+        navigate(`/${redirect}`);
+        if(redirect !== "shipping") ToastCallSuccess("Login Successfully")
       }
-    }, [error,dispatch,navigate,isAuthenticated])
+    }, [error,dispatch,navigate,isAuthenticated,redirect])
     
   return (
     <>

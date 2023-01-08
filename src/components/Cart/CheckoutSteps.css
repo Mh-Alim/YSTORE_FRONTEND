@@ -1,0 +1,16 @@
+.stepper{
+    margin: 3rem 0;
+    padding: 1rem 4rem;
+}
+
+.MuiStepConnector-line {
+    display: none !important;
+}
+
+.MuiStepConnector-root {
+    height: 1px;
+    background-color: black;
+}
+.Mui-completed {
+    color: tomato;
+}

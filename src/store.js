@@ -5,6 +5,7 @@ import {composeWithDevTools} from "redux-devtools-extension";
 import { productReducer,productDetailsReducer } from "./reducers/productReducer";
 import { userReducer,profileReducer,forgetPasswordReducer  } from "./reducers/userReducer";
 import { cartReducer  } from "./reducers/cartReducers";
+import {newOrderReducer  } from "./reducers/orderReducers";
 
 
 console.log(productReducer);
@@ -15,7 +16,8 @@ const reducer = combineReducers({
     user : userReducer,
     profile : profileReducer,
     forgetPassword : forgetPasswordReducer,
-    cart : cartReducer
+    cart : cartReducer,
+    newOrder : newOrderReducer
 });
 
 let cartInfo = () => {
@@ -23,9 +25,15 @@ let cartInfo = () => {
     console.log("cart Info ",y);
     return y;
 }
+
+let shipping = ()=>{
+    let data = localStorage.getItem("shippingInfo") ? JSON.parse(localStorage.getItem("shippingInfo")) : {};
+    return data;
+}
 let initialState = {
     cart : {
-        cartItems : cartInfo()
+        cartItems : cartInfo(),
+        shippingInfo : shipping()
     }
 };
 

@@ -9,7 +9,7 @@ const ProtectedRoutes = ({element,...rest}) => {
 
     const {loading,isAuthenticated,user} = useSelector(state=>state.user);
 
-    return !loading &&  isAuthenticated ? (<Outlet/>): <Navigate to="/login" />
+    return<> {!loading &&  isAuthenticated === false ? <Navigate to="/login" /> : (<Outlet/>)}</>
 }
 
 export default ProtectedRoutes

@@ -1,14 +1,16 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, removeItemFromCart } from '../actions/cartAction'
-import { ToastCallSuccess } from '../ReactToast'
+import { addToCart, removeItemFromCart } from '../../actions/cartAction'
+import { ToastCallSuccess } from '../../ReactToast'
 import "./Cart.css"
 import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
 import CardItemCard from './CartItemCard'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Typography } from '@mui/material'
 
 const Cart = () => {
+
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const {cartItems} = useSelector(state=>state.cart);
 
@@ -30,6 +32,11 @@ const Cart = () => {
     const deleteItemsFromCart = (id)=>{
         dispatch(removeItemFromCart(id));
         ToastCallSuccess("Item removed from cart");
+    }
+
+
+    const checkOutHandler = ()=>{
+        navigate("/login?redirect=shipping")
     }
   return (
     <>
@@ -65,11 +72,11 @@ const Cart = () => {
                 <div></div>
                 <div className="cartGrossTotalBox">
                     <p>Gross Total</p>
-                    <p>{`200 Rs.`}</p>
+                    <p>{`${cartItems.reduce((accum,item)=> accum+item.price*item.quantity,0)} Rs.`}</p>
                 </div>
                 <div></div>
                 <div className="checkOutBtn">
-                    <button>Check Out</button>
+                    <button onClick={checkOutHandler}>Check Out</button>
                 </div>
             </div>
         </div>

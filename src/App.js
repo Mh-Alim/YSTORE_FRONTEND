@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { Route,Routes } from "react-router-dom"
 import Header from './components/Layouts/Header/Header';
@@ -12,7 +12,7 @@ import Products from './components/Product/Products';
 import Signup from './components/User/Signup';
 import Login from './components/User/Login';
 import store from "./store";
-import { clearErrors, loadUser } from './actions/userActions';
+import {  loadUser } from './actions/userActions';
 import { useSelector } from 'react-redux';
 import UserOptions from './components/Layouts/Header/UserOptions';
 import { ToastContainerError, ToastContainerSuccess } from './ReactToast';
@@ -21,9 +21,16 @@ import ProtectedRoutes from './components/Route/ProtectedRoutes';
 import UpdateProfile from './components/User/UpdateProfile';
 import ChangePassword from './components/User/ChangePassword';
 import ForgetPassword from './components/User/ForgetPassword';
-import { CLEAR_ERRORS } from './constants/userConstants';
+// import { CLEAR_ERRORS } from './constants/userConstants';
 import ResetPassword from './components/User/ResetPassword';
-import Cart from './Cart/Cart';
+import Cart from './components/Cart/Cart';
+import Shipping from './components/Cart/Shipping';
+import ConfirmOrder from './components/Cart/ConfirmOrder';
+import Payment from './components/Cart/Payment';
+
+import axios from "axios"
+import OuterPayment from './components/Cart/OuterPayment';
+import OrderSuccess from './components/Cart/OrderSuccess';
 
 
 
@@ -34,11 +41,12 @@ import Cart from './Cart/Cart';
 
 function App() {
 
+  const {user,isAuthenticated,error} = useSelector(state => state.user);
 
-  const {user,isAuthenticated,error} = useSelector(state => state.user)
 
   useEffect(() => {
     store.dispatch(loadUser());
+
   }, [])
   
 
@@ -70,7 +78,11 @@ function App() {
           <Route exact path='/account' element={<Profile/>} />
           <Route exact path='/me/update' element={<UpdateProfile/>} />
           <Route exact path='/password/update' element={<ChangePassword/>} />
-
+          <Route exact path='/shipping' element={<Shipping />} />
+          <Route exact path='/order/confirm' element={<ConfirmOrder />} />
+          <Route exact path='/process/payment' element={<OuterPayment />} />
+          <Route exact path='/success' element={<OrderSuccess />} />
+       
         </Route>
 
         <Route exact path='/forgetPassword' element={<ForgetPassword />} />
