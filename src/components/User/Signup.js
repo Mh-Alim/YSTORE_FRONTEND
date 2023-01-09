@@ -27,10 +27,10 @@ const Signup = () => {
 
     const [avatar, setAvatar] = useState()
     const [avatarPreview, setAvatarPreview] = useState("/userImg.png")
+
     
     const registerSubmitHandler = async(e) => {
         e.preventDefault();
-
         const myForm = new FormData();
 
         myForm.set("name",name);
@@ -54,13 +54,13 @@ const Signup = () => {
     
 
     const registerDataChange = (e)=>{
-
+        console.log("registerdata")
         if(e.target.name === "avatar"){
             const reader = new FileReader();
             reader.onload = ()=>{
                 if(reader.readyState === 2){
-                    setAvatarPreview(reader.result);
                     setAvatar(reader.result);
+                    setAvatarPreview(reader.result);
                 }
             }
 

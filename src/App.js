@@ -31,6 +31,8 @@ import Payment from './components/Cart/Payment';
 import axios from "axios"
 import OuterPayment from './components/Cart/OuterPayment';
 import OrderSuccess from './components/Cart/OrderSuccess';
+import MyOrders from './components/Order/MyOrders';
+import OrderDetails from './components/Order/OrderDetails';
 
 
 
@@ -82,6 +84,8 @@ function App() {
           <Route exact path='/order/confirm' element={<ConfirmOrder />} />
           <Route exact path='/process/payment' element={<OuterPayment />} />
           <Route exact path='/success' element={<OrderSuccess />} />
+          <Route exact path='/orders' element={<MyOrders />} />
+          <Route exact path='/order/:id' element={<OrderDetails />} />
        
         </Route>
 

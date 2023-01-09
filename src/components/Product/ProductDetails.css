@@ -31,6 +31,14 @@
     border-bottom: 2px solid var(--white);
     border-top: 2px solid var(--white);
 }
+
+.detailsBlock-2-rating {
+    color: yellow;
+    font: 20rem;
+}
+.reviewCardComment{
+    color: white !important;
+}
 .detailsBlock-2 > span{
     margin-left: 1rem;
 }
@@ -116,6 +124,15 @@
     color: var(--white-green);
     border-bottom: 2px solid var(--white-green);
     margin-bottom: 3rem;
+}
+
+.submitDialogTextArea{
+    border: 1px solid black;
+    margin: 1vmax 0;
+    outline: none;
+    padding: 1rem;
+    font: 300 1rem "Roboto";
+    background-color: white;
 }
 
 .reviewCard{
@@ -221,6 +238,12 @@
     }
     .detailsBlock-3-1-1 > input[type = "number"] {
         padding: 0.2rem 0.5rem;
+    }
+    .reviewCard > p {
+        font: 300 3vw "Roboto";
+    }
+    .reviewCardComment {
+        font: 300 3vw "Roboto";
     }
 }
 @media screen and (max-width : 360px) {
