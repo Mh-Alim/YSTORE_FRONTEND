@@ -12,13 +12,21 @@ const ProductCard = ({product}) => {
     size: "larget",
     readOnly : true,
     precision : 0.5,
+    
 }
   return (
     <Link className="product" to={`/product/${product._id}`}>
         <img src={shirt} alt="" />
         <div className="productContent">
             <h3>{product.name}</h3>
-            <div className="rating"><span className="stars"><Rating {...options} /></span> <span className="reviewText">({product.numOfReviews} Reviews)</span></div>
+            <div className="rating">
+              <span className="stars">
+              <Rating {...options} />
+              </span> 
+              <span className="reviewText">
+                ({product.numOfReviews} Reviews)
+              </span>
+            </div>
             <p className="price white">{product.price} Rs.</p>
         </div>
 

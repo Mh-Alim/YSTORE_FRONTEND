@@ -33,6 +33,7 @@ import OuterPayment from './components/Cart/OuterPayment';
 import OrderSuccess from './components/Cart/OrderSuccess';
 import MyOrders from './components/Order/MyOrders';
 import OrderDetails from './components/Order/OrderDetails';
+import Dashboard from './components/admin/Dashboard';
 
 
 
@@ -86,6 +87,9 @@ function App() {
           <Route exact path='/success' element={<OrderSuccess />} />
           <Route exact path='/orders' element={<MyOrders />} />
           <Route exact path='/order/:id' element={<OrderDetails />} />
+
+          // admin 
+          <Route exact path='/admin/dashboard' element={<Dashboard />} />
        
         </Route>
 

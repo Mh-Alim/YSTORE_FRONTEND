@@ -55,7 +55,8 @@
   --light-green : #6BD425;
   --slate: #8892b0;
   --white-green: #64ffda;
- 
+  --hover-blue : #344d6c;
+  --star : 	#ffe234;
 
 
   /* font family  */
@@ -76,10 +77,12 @@
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
- 
+}
+html {
+  background-color: var(--navy);
 }
 .app{
-  background-color: var(--white);
+  background-color: var(--navy);
   height: 100vh;
 }
 

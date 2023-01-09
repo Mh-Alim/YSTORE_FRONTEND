@@ -1,15 +1,48 @@
 #header > #navbar{
-    background-color: var(--black);
-
+    background-color: var(--navy);
+    box-shadow: 0rem 2rem 2rem var(--navy);
+}
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
 }
 
 #header .hamburger{
-    color: var(--light-blue);
+    color: var(--green);
 }
 #navbarScroll .navUrl {
     color: var(--white);
     font-family: var(--font-mono);
 }
+#navbarScroll .navUrl:hover {
+    color: var(--green);
+    
+}
+
+#header #searchBtn{
+    font-family: var(--font-mono);
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+#header #searchBtn:hover{
+    
+    background-color: #47698d;
+}
+
+.navUrl > img{
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+.navUrl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 #header .web_name{
     color: var(--light-blue);
@@ -17,7 +50,9 @@
     margin-right: 2rem;
     font-family: var(--font-mono);
 }
-
+.web_name > img {
+    width: 4rem;
+}
 
 
 /* user options css  */
@@ -25,7 +60,7 @@
 .speedDial {
     position: fixed;
     right: 3vmax;
-    top: 4vmax;
+    top: 8vmax;
     
 }
 

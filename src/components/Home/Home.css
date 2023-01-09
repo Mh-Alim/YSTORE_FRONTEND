@@ -1,5 +1,5 @@
 .outer_home{
-    background-color: var(--black);
+    background-color: var(--navy);
 }
 .home{
     width: 100%;
@@ -17,8 +17,8 @@
     padding: 1rem 2rem;
     margin-top: -10rem;
     font-size: 4rem;
-    color: var(--light-blue);
-    font-weight: 800;
+    color: var(--green);
+    font-weight: 1000;
     font-family: var(--font-sans);
 }
 
@@ -26,6 +26,7 @@
     padding: 1rem 2rem;
     font-size: 2rem;
     color: var(--white);
+    font-family: var(--font-mono);
 }
 .home img{
     filter: invert(1);

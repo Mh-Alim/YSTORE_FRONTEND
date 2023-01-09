@@ -2,8 +2,8 @@
     padding-top: 2rem;
     font-size: 2rem;
     font-family: var(--font-mono);
-    background-color: var(--black);
-    color: var(--light-blue);
+    background-color: var(--navy);
+    color: var(--green);
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
@@ -15,12 +15,12 @@
     display: block;
     width: 20%;
     height: 1px;
-    background-color: var(--light-blue);
+    background-color: var(--green);
     margin-left: 1rem;
 }
 
 .FeaturedProducts{
-    background-color: var(--black);
+    background-color: var(--navy);
     height: fit-content;
     width: 100%;
 }
@@ -57,19 +57,28 @@
     align-items: center;
     justify-content: center;
 }
+.rating > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .stars{
     padding-bottom: 0.2rem;
 }
+.stars > span {
+    color: var(--star);
+}
 .productContent h3{
     padding-top: 0.8rem;
-    color: var(--white);
+    color: var(--slate);
+    font-family: var(--font-mono);
 }
 .white{
-    color: var(--white);
+    color: var(--slate);
 }
 .reviewText{
     margin-left: 1rem;
-    color: var(--white);
+    color: var(--slate);
 }
 
 

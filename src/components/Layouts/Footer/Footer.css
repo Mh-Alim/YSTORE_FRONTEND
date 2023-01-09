@@ -1,5 +1,5 @@
 #footer > .bg-footer {
-    background-color: var(--black);
+    background-color: var(--navy);
     width: 100%;
    
 }
@@ -12,5 +12,15 @@
 }
 .text-center a{
     text-decoration: none;
+    font-family: var(--font-mono);
+    color: var(--green);
+}
+.text-center a:hover{
+    background-color: var(--hover-blue);
+    color: var(--green);
+}
+#name {
+    margin-left: 0.5rem;
+    color: var(--green);
     font-family: var(--font-mono);
 }

@@ -1,10 +1,16 @@
+
+#Products {
+    background-color: var(--navy);
+    margin-top: 6rem;
+}
+
 .productsHeading {
     margin: 2vmax auto;
     width: 15vw;
     border-bottom: 1px solid var(--white-green);
     padding: 2vmax;
-    color: var(--white-green);
-    font: 500 1.5vmax var(--font-mono);
+    color: var(--green);
+    font: 500 2vmax var(--font-mono);
     text-align: center;
 }
 

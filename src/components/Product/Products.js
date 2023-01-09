@@ -62,6 +62,7 @@ const Products = () => {
   return (
     <>
     {loading ? <Loader /> : <>
+    <div id="Products">
       <MetaData title="ALL PRODUCTS" />
       <h2 className="productsHeading">
         Products
@@ -131,6 +132,8 @@ const Products = () => {
           activeLinkClass = "pageLinkActive"
         />
       </div> : null}
+
+      </div>
     </>
     }
     </>
