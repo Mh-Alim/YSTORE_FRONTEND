@@ -77,13 +77,16 @@
 
 body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
 }
 html {
   background-color: var(--navy);
 }
 .app{
   background-color: var(--navy);
-  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 
@@ -122,4 +125,21 @@ html::-webkit-scrollbar-thumb{
   background-color: var(--green); 
   border-radius: 5px;
   
+}
+
+
+.slate {
+  color: var(--slate);
+}
+.green {
+  color: var(--green);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-sans {
+  font-family: var(--font-poppins);
+}
+.font-roboto {
+  font-family: var(--font-roboto);
 }

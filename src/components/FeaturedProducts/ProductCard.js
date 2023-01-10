@@ -9,7 +9,7 @@ import { Rating } from "@mui/material";
 const ProductCard = ({product}) => {
   const options = {
     value : product.ratings,
-    size: "larget",
+    size: "small",
     readOnly : true,
     precision : 0.5,
     

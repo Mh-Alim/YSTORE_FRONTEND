@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import nameLogo from "../../../imgs/name_logo.png"
 import LoginLogo from "../../../imgs/login_logo.png"
 
@@ -26,6 +26,52 @@ const Header = () => {
     else navigate("/products");
   }
 
+
+
+  const toggleActiveClass = () => {
+
+    console.log("clicked");
+    var hamburger = document.querySelector(".hamburger");
+    var navbar = document.querySelector(".nav_elements");
+
+    // On click
+    hamburger.classList.toggle("is-active");
+    navbar.classList.toggle("showNavList")
+  }
+  
+  return (
+
+    
+    <div className='navbar' id='navbar'>
+        <div className="logo"><img src={nameLogo} alt="" /></div>
+        <div className='nav_elements'>
+            <p onClick={toggleActiveClass} className='nav_element' id='about'><Link  style={{ textDecoration: 'none',color : 'var(--slate)' }} to='/'> <span className='green'>01.</span><span className='nav_elem_text'>Home</span>  </Link></p>
+            <p onClick={toggleActiveClass} className='nav_element'><Link   style={{ textDecoration: 'none',color : 'var(--slate)' }} to='/products'> <span className='green'>02.</span><span className='nav_elem_text'>Products</span> </Link></p>
+            <p onClick={toggleActiveClass} className='nav_element'><Link  style={{ textDecoration: 'none',color : 'var(--slate)' }} to='/profile'> <span className='green'>03.</span><span className='nav_elem_text'>Profile</span></Link></p>
+            <p onClick={toggleActiveClass} className='nav_element'><Link  style={{ textDecoration: 'none',color : 'var(--slate)' }} to='/login'> <span className='green'>03.</span><span className='nav_elem_text'>Login</span></Link></p>
+            <div id="search">
+            <Form className="d-flex" onSubmit={searchBarHandler} >
+              <Form.Control
+              style={{fontFamily:"var(--font-mono)"}}
+                type="search"
+                placeholder="Search Product"
+                className="me-2"
+                aria-label="Search"
+                ref={keywordRef}
+              />
+              <Button id='searchBtn' type='submit'  variant="outline-success">Search</Button>
+            </Form>
+        </div>
+            {/* <div onClick={toggleActiveClass}  ><a  href="https://drive.google.com/file/d/1aoJhmxa6B2KUTJfoLmvwFwfeFnGDQjUE/view?usp=sharing"  target="_blank" rel="noreferrer"  className='nav_resume' style={{ textDecoration: 'none' }} > Resume </a></div> */}
+        </div>
+        
+        <button className="hamburger hamburger--spin" onClick={toggleActiveClass} type="button">
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
+    </div>
+  )
 
   return (
     <div id="header">
