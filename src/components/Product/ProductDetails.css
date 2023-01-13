@@ -1,5 +1,5 @@
 .ProductDetails{
-    background-color: var(--black);
+    background-color: var(--navy);
     height: fit-content;
     display: flex;
     justify-content: flex-start;
@@ -28,16 +28,15 @@
     align-items: center;
     margin: 2rem 0;
     padding: 1rem 0;
-    border-bottom: 2px solid var(--white);
-    border-top: 2px solid var(--white);
+    border-bottom: 2px solid var(--slate);
+    border-top: 2px solid var(--slate);
 }
 
 .detailsBlock-2-rating {
-    color: yellow;
-    font: 20rem;
+    color: rgb(255, 255, 57) !important;
 }
 .reviewCardComment{
-    color: white !important;
+    color: var(--slate) !important;
 }
 .detailsBlock-2 > span{
     margin-left: 1rem;
@@ -55,38 +54,56 @@
 .detailsBlock-3-1-1 > button{
     padding: 0.5rem 1rem;
     font-weight: 1000;
-    background-color: #761b1b ;
+    background-color: var(--light-navy) ;
+    border: 2px solid var(--light-navy);
+
     font-size: 1rem;
-    color: var(--white);
+    color: var(--slate);
     transition: background-color 0.5s;
 }
+.detailsBlock-3-1-1 > button:first-child{
+    border-radius: 5px 0 0 5px;
+ 
+}
+.detailsBlock-3-1-1 > button:last-child{
+    border-radius: 0 5px 5px 0;
+ 
+}
+
 .detailsBlock-3-1-1 > button:hover{
 
-    background-color: #f83636;
+    background-color: var(--hover-blue);
+    color: var(--green);
     
 }
 .detailsBlock-3-1-1 > input[type = "number"]{
-    width: 10%;
-    padding: 0.5rem 1rem;
+    width: 20%;
+    padding:0.62rem 1rem;
+
     font-weight: bold;
-    background-color: var(--slate);
-    color: black;
+    background-color: var(--light-navy);
+    color: var(--green);
     outline: none;
     text-align: center;
-    margin: 0 0.5rem;
-    border-radius: 4px;
+    border: none;
+    border-radius: 0;
+    /* margin: 0 0.5rem; */
+    /* border-radius: 4px; */
 }
 
 .detailsBlock-3-1 > button{
-    background-color: #761b1b;
-    color: var(--white);
+    background-color: transparent;
+    /* color: var(--slate); */
+    color: var(--dull-white);
     padding: 0.5rem 2rem;
-    border-radius: 20px;
+    border-radius: 5px;
     transition: background-color 0.5s;
     margin-bottom: 1rem;
+    border: 2px solid var(--green);
 }
 .detailsBlock-3-1 > button:hover{
-    background-color: #f83636;
+    background-color: var(--hover-blue);
+    color: var(--green);
    
 }
 .detailsBlock-3-1 > button > i{
@@ -96,18 +113,38 @@
 .submitReview {
     width: 40%;
     margin-top: 1rem;
-    background-color: #761b1b;
-    color: var(--white);
+    font-family: var(--font-mono);
+    background-color: transparent;
+    color: var(--dull-white);
     padding: 0.5rem 1rem;
-    border-radius: 20px;
+    border-radius: 5px;
+
+    border: 2px solid var(--green);
     transition: background-color 0.5s;
     margin-bottom: 1rem;
+}
+
+.submitReview:hover {
+    background-color: var(--hover-blue);
+}
+
+.reviewsHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--green);
+    margin-bottom: 4rem;
+}
+
+.detailsReviewStar{
+    color: var(--star) !important;
 }
 
 .reviews{
     width: 100%;
     height: fit-content;
-    background-color: var(--black);
 }
 .reviews{
     color: var(--slate);
@@ -202,6 +239,12 @@
         width: 100%;
     }
     
+}
+
+@media screen and (max-width: 1000px){
+   .ProductDetails {
+    margin-top: 5rem;
+   }
 }
 @media screen and (max-width: 830px){
     

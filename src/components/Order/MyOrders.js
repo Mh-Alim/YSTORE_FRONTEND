@@ -30,7 +30,7 @@ const MyOrders = () => {
             return params.getValue(params.id,"status") === "Delivered" ? "greenColor":"redColor"
         }},
         {field : "itemsQty",headerName : "Items Qty",type : "number",minWidth:150,flex : 0.3},
-        {field : "amount",headerName : "Amount",type : "number",minWidth:270,flex : 0.5},
+        {field : "amount",headerName : "Amount(in Rs)",type : "number",minWidth:270,flex : 0.5},
         {field : "actions",headerName : "Actions",type : "number",minWidth:150,flex : 0.3,sortable : false,
         renderCell:(params)=>{
             return <Link to = {`/order/${params.getValue(params.id,"id")}`} >

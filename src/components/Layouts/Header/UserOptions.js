@@ -47,7 +47,7 @@ const UserOptions = ({user}) => {
     {icon : <LogoutIcon/>,name : "Logout",func: logoutUser},
     ]
 
-  {user.Role === "Admin" && options.unshift({icon : <DashboardIcon/>,name : "Dashboard",func: dashboard},)}
+  {user && user.role === "admin" && options.unshift({icon : <DashboardIcon/>,name : "Dashboard",func: dashboard},)}
 
   const [open, setOpen] = useState(false);
   return (

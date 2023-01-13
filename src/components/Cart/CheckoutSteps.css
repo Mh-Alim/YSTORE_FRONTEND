@@ -1,6 +1,17 @@
 .stepper{
-    margin: 3rem 0;
+    margin-top: 7rem;
+    /* margin-bottom: 4rem; */
     padding: 1rem 4rem;
+    color: var(--slate);
+   
+    
+}
+.stepper P {
+   font-size: 1vmax;
+   color: var(--slate);
+}
+.stepper svg {
+    font-size: 2vmax;
 }
 
 .MuiStepConnector-line {
@@ -9,8 +20,14 @@
 
 .MuiStepConnector-root {
     height: 1px;
-    background-color: black;
+    background-color: var(--slate);
 }
 .Mui-completed {
-    color: tomato;
+    color: var(--green);
+}
+
+@media screen and (max-width: 500px) {
+    .stepper p {
+        display: none;
+    }
 }

@@ -18,7 +18,7 @@ const ReviewCard = ({review}) => {
     <div className='reviewCard'>
         <img src={userImg} alt="" />
         <p>{review.name}</p>
-        <p><Rating className='reviewCardComment' {...options}/></p>
+        <p><Rating className='detailsReviewStar' {...options}/></p>
         <span >{review.comment}</span>
     </div>
   )

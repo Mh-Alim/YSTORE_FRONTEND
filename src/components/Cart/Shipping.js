@@ -69,7 +69,7 @@ const Shipping = () => {
                         <PhoneIcon />
                         <input type="number" placeholder = "Phone Number" required value = {phoneNo} onChange={(e)=> setPhoneNo(e.target.value)} size="10" />
                     </div>
-                    <div>
+                    <div className='country'>
                         <PublicIcon />
                         <select required value = {country} onChange={(e)=> setCountry(e.target.value)} >
                             <option value=""> Country </option>
@@ -79,7 +79,7 @@ const Shipping = () => {
                     </div>
 
                     {country && (
-                        <div>
+                        <div className='state'>
                             <TransferWithinAStationIcon />
                             <select required value={state} onChange={(e)=>setState(e.target.value)}>
                                 <option value=""> State </option>

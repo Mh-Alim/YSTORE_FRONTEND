@@ -1,15 +1,13 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import { Navigate, Outlet } from 'react-router-dom'
-import { loadUser } from '../../actions/userActions'
-import store from '../../store'
+import Loader from '../Layouts/Loader/Loader';
 
 
-const ProtectedRoutes = ({element,...rest}) => {
+const ProtectedRoutes = () => {
 
-    const {loading,isAuthenticated,user} = useSelector(state=>state.user);
-
-    return<> {!loading &&  isAuthenticated === false ? <Navigate to="/login" /> : (<Outlet/>)}</>
+    const {loading,isAuthenticated} = useSelector(state=>state.user);
+    return<> {loading === false ? isAuthenticated === true ? (<Outlet/>) : <Navigate to="/login" /> : <Loader/> }</>
 }
 
 export default ProtectedRoutes

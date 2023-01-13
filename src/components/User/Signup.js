@@ -83,7 +83,7 @@ const Signup = () => {
                     <form action="" method='POST' encType="multipart/form-data" className='input-icons' onSubmit={registerSubmitHandler}>
                         <div className='input_element'>
                             <i className="fa fa-user icon"></i>
-                            <input onChange={registerDataChange} type="text" name='name' id='name'  placeholder='Your name'/>
+                            <input onChange={registerDataChange} type="text" name='name' id='user_name'  placeholder='Your name'/>
                         </div>
                         <div className='input_element'>
                             <i className="fa fa-envelope icon"></i>

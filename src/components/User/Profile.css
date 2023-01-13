@@ -1,12 +1,10 @@
 .profileContainer {
+    margin-top: 4rem;
     display: flex;
     height: 100vh;
     width: 100vw;
-    position: fixed;
-    top: 0%;
-    left: 0%;
+
     max-width: 100%;
-    background-color: white;
 }
 
 .profileContainer-1,.profileContainer-2{
@@ -20,12 +18,14 @@
 }
 
 .profileContainer-1{
-    color: black;
-    font: 500 2.2vmax "Roboto";
+    color: var(--green);
+    font: 900 3rem var(--font-mono);
 }
 
 .profileContainer-1 > h1{
     transform: translateX(-10vmax) translateY(-2vmax);
+    font: 900 3rem var(--font-mono);
+    border-bottom: 2px solid var(--green);
 }
 
 .profileContainer-1 > img {
@@ -40,22 +40,23 @@
 
 .profileContainer-1 > a {
     border: none;
-    background-color: tomato;
+    background-color: var(--light-navy);
+    border: 2px solid var(--green);
+    border-radius: 5px;
     font: 400 1vmax "Roboto";
-    color: white;
     padding: 0.5vmax;
     width: 30%;
     margin: 4vmax;
     text-align: center;
     text-decoration: none;
     transition: all 0.5s;
+    color: var(--slate);
 }
-
-
 .profileContainer-1 > a:hover{
-    background-color: rgb(204, 78, 56);
-    color: white;
+    color: var(--green);
+    background-color: var(--hover-blue);
 }
+
 
 .profileContainer-2 {
     justify-content: center;
@@ -68,12 +69,12 @@
     padding: 1rem 0;
 }
 .profileContainer-2 > div > h4 {
-    color: black;
-    font: 400 1.4vmax "Roboto";
+    color: var(--slate);
+    font: 400 1.4vmax var(--font-roboto);
 }
 
 .profileContainer-2 > div > p {
-    color: black;
+    color: var(--dull-white);
     font: 400 1vmax cursive;
     margin: 0.2vmax;
 }
@@ -81,13 +82,15 @@
 
 .profileContainer-2 > div:last-child {
     display: flex;
+
     flex-direction: column;
     width: 60%;
 }
 
 .profileContainer-2 > div:last-child > a {
-    border: none;
-    background-color: rgb(68, 68, 68);
+    border: 2px solid var(--green);
+    background-color: var(--light-navy);
+    border-radius: 4px;
     font: 400 1vmax "Roboto";
     color: white;
     text-decoration: none;
@@ -98,7 +101,7 @@
 }
 
 .profileContainer-2 > div:last-child > a:hover{
-    background-color: rgb(31, 31, 31);
+    background-color: var(--hover-blue);
 }
 
 

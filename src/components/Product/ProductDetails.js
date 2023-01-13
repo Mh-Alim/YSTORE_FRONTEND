@@ -108,15 +108,15 @@ const ProductDetails = () => {
 
         <div className='detailsBlock'>
             <div className="detailsBlock-1">
-                <h2>{product.name}</h2>
-                <p> Product # {product._id}</p>
+                <h2 className='font-mono' >{product.name}</h2>
+                <p className='slate font-mono'> Product # {product._id}</p>
             </div>
-            <div className="detailsBlock-2">
+            <div className="detailsBlock-2 ">
                 <Rating className='detailsBlock-2-rating' {...options} />
-                <span>({product.numOfReviews} Reviews)</span>
+                <span className='slate'>({product.numOfReviews} Reviews)</span>
             </div>
             <div className="detailsBlock-3">
-                <h1> {product.price} Rs </h1>
+                <h1 className='roboto slate'> {product.price} Rs </h1>
                 <div className="detailsBlock-3-1">
                     <div className="detailsBlock-3-1-1">
                         <button onClick={decrement}>-</button>
@@ -133,7 +133,7 @@ const ProductDetails = () => {
                 Desciption : {product.description}
             </div>
 
-            <button onClick={submitReviewToggle} className='submitReview'> Submit Review </button>
+            <button onClick={submitReviewToggle} className='submitReview'> Submit Review!! </button>
         </div>
 
         
